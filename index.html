@@ -1,0 +1,28 @@
+<html>
+  <head>
+    <meta charset="utf-8" />
+    <title>Projekt</title>
+    <script src="https://aframe.io/releases/1.0.4/aframe.min.js"></script>
+    <script src="https://raw.githack.com/AR-js-org/AR.js/master/aframe/build/aframe-ar-nft.js"> </script>
+    <script src="https://unpkg.com/aframe-look-at-component@0.8.0/dist/aframe-look-at-component.min.js"></script>  
+    <script src="./script.js"></script>
+  </head>
+  <body style='margin: 0; overflow: hidden;'>
+    
+    <a-scene 
+        id="szene"
+        vr-mode-ui='enabled: false' 
+        embedded
+        arjs='sourceType: webcam; sourceWidth:1280; sourceHeight:960; displayWidth: 1280; displayHeight: 960; debugUIEnabled: false;'>
+        <div id="demo" style="position: fixed; right: 1%; top: 1%; font-size: 1.05em; color: rgb(17, 16, 16); font-family: 'Courier New'; font-weight: bold; z-index: 999999;"></div>
+    
+      <!--Camera + Arrow-->
+      <a-camera gps-camera=" minDistance: 1; maxDistance: 50;  gpsMinDistance: 5; gpsTimeInterval: 3;" rotation-reader>
+        <a-gltf-model id="pfeil"
+        src="https://raw.githubusercontent.com/MariWe/ArSkulpturen/main/assets/untitled.glb"
+        scale="1 1 1"
+        position="0 0 -4 ">
+        </a-gltf-model>
+      </a-camera> 
+</a-scene>
+</html> 
