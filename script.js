@@ -17,7 +17,9 @@ window.onload = function () {
         setTimeout(function () {
             GPSrechner();
             one = document.getElementById(0);
-            Pointing();
+            setInterval(function () {
+                Pointing();
+            },200)
         }, 2000)   
     }).catch(function (error) {
     })
