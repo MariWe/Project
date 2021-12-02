@@ -1,44 +1,24 @@
 body{
-    background-color: #122b4c;
-}
-#main{
-    color: black;
-    background-color:#e6852b98;
-    font-family: 'Courier New', Courier, monospace;
+    background: linear-gradient(40deg, #122b4c, rgb(77, 109, 151));
+    color: lightgrey;
     text-align: center;
-    height: 60%;
 }
 
 p{
     font-size: large;
+    margin: 15px;
 }
 
 #header{
-    background-color: #122b4c;
+    background-color: transparent;
     width: 100%;
-    height: 20%;
-}
-#links{
-    width: 15%;
-    height: 100%;
-    position: absolute;
-    text-align: left;
-    background-color: #122b4c;
-}
-
-#rechts{
-    width: 15%;
-    height: 100%;
-    position: absolute;
-    text-align: right;
-    margin-left: 85%;
-    background-color: #122b4c;
+    height: 10%;
 }
 
 button{
     border-radius: 4px;
     color: lightgrey;
-    background-color: #122b4c;
+    background-color: #e6852b98;
     font-family: 'Courier New', Courier, monospace;
     font-size: 16px;
 }
