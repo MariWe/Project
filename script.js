@@ -15,7 +15,7 @@ window.onload = function () {
     })
 
     GetCurrentPosition().then(function (position) {
-        createPoints();
+        createPoints(points);
         GPSrechner(position);
         //throw new Error("test");
     }).then(function () {
