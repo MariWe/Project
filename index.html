@@ -14,7 +14,9 @@
 
   <a-scene id="szene" vr-mode-ui='enabled: false' embedded
     arjs='sourceType: webcam; sourceWidth:1280; sourceHeight:960; displayWidth: 1280; displayHeight: 960; debugUIEnabled: false;'>
-
+    <div id="demo"
+      style="position: fixed; right: 1%; top: 1%; font-size: 1.05em; color: rgb(17, 16, 16); font-family: 'Courier New'; font-weight: bold; z-index: 999999;">
+    </div>
     <!--Camera + Arrow-->
     <a-camera gps-camera=" minDistance: 1; maxDistance: 50;  gpsMinDistance: 5; gpsTimeInterval: 3;" rotation-reader>
       <a-gltf-model id="pfeil" src="https://raw.githubusercontent.com/MariWe/Project/main/assets/Unbenannt.glb"
@@ -22,5 +24,4 @@
       </a-gltf-model>
     </a-camera>
   </a-scene>
-
 </html>
