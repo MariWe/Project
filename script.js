@@ -8,21 +8,21 @@ let R = 6378137;
 
 window.onload = function () {
 
-    readGraphData().then(function (text) {
+     readGraphData().then(function (text) {
         let algo = new RoutingAlgorithm(text);
         points = algo.GetDijkstraSolution("E", "P_024", 0.0);
         return points;
     }).then (function (points){
         createPoints(points);
-    })
-
-    GetCurrentPosition().then(function (position, points) {
+    }).then(function(){
+        GetCurrentPosition().then(function (position, points) {
         GPSrechner(position, points);
         //throw new Error("test");
     }).then(function () {
         Mittelwert();
     }).catch((ex) => {
         console.error(ex);
+    })
     })
 
 
