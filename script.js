@@ -16,8 +16,8 @@ window.onload = function () {
         createPoints(points);
     })
 
-    GetCurrentPosition().then(function (position) {
-        GPSrechner(position);
+    GetCurrentPosition().then(function (position, points) {
+        GPSrechner(position, points);
         //throw new Error("test");
     }).then(function () {
         Mittelwert();
