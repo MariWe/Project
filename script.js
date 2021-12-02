@@ -63,7 +63,6 @@ window.onload = function () {
         navigator.geolocation.watchPosition(function (position) {
             arrayLat.push(position.coords.latitude);
             arrayLon.push(position.coords.longitude);
-            console.log(arrayLat, arrayLon);
             let sLat = 0;
             let sLon = 0;
             if (arrayLat.length <= 10 && arrayLon.length <= 10) {
