@@ -12,10 +12,11 @@ window.onload = function () {
         let algo = new RoutingAlgorithm(text);
         points = algo.GetDijkstraSolution("E", "P_024", 0.0);
         return points;
+    }).then (function (points){
+        createPoints(points);
     })
 
     GetCurrentPosition().then(function (position) {
-        createPoints(points);
         GPSrechner(position);
         //throw new Error("test");
     }).then(function () {
