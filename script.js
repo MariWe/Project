@@ -5,10 +5,13 @@ let arrayLon = [];
 let points;
 let lat, lon, zielLat, zielLon, lat1, lon1, lat2, lon2, p;
 let R = 6378137;
+let dong = new Audio();
+dong.src = 'collect.mp3';
+dong.volume = 0.05;
 
 window.onload = function () {
 
-     readGraphData().then(function (text) {
+    readGraphData().then(function (text) {
         let algo = new RoutingAlgorithm(text);
         points = algo.GetDijkstraSolution("E", "P_024", 0.0);
         return points;
@@ -20,12 +23,11 @@ window.onload = function () {
         //throw new Error("test");
     }).then(function () {
         Mittelwert();
-    }).catch((ex) => {
-        console.error(ex);
+    }).catch((ex) => { 
+        console.error(ex); 
     })
     })
-
-
+ 
     function Pointing() {
         var pfeil = document.querySelector('#pfeil');
         var position = one.object3D.position;
@@ -128,12 +130,14 @@ window.onload = function () {
         zielDistanz(lat1, lon1, zielLat, zielLon);
         Distanz(lat1, lon1, lat2, lon2);
         Display();
-        if (d < 5) {
+        if (d < 9) {
             if (next.dataset.next === "null") {
                 const div = document.querySelector('#demo');
                 div.innerText = "Sie haben Ihr Ziel erreicht!";
             }
             else {
+                one.remove();
+                dong.play();
                 one = next;
                 obj = next;
             }
@@ -156,6 +160,7 @@ window.onload = function () {
             Math.sin(Δλ / 2) * Math.sin(Δλ / 2);
         const c = 2 * Math.atan2(Math.sqrt(a), Math.sqrt(1 - a));
         d = R * c; // in metres
+        console.log(d);
         return d;
     }
 }
