@@ -1,4 +1,5 @@
 body{
+    font-family: serif;
     background: linear-gradient(40deg, #122b4c, rgb(77, 109, 151));
     color: lightgrey;
     text-align: center;
@@ -9,6 +10,10 @@ p{
     margin: 15px;
 }
 
+#h{
+    text-shadow: #e6852b98 1px 0 10px;
+}
+
 #header{
     background-color: transparent;
     width: 100%;
@@ -16,14 +21,16 @@ p{
 }
 
 button{
+    text-shadow: #738cad 1px 0 8px;
     border-radius: 4px;
-    color: lightgrey;
-    background-color: #e6852b98;
-    font-family: 'Courier New', Courier, monospace;
+    color: #183964;
+    background-color: #f8994098;
+    font-family: serif;
     font-size: 16px;
 }
 
 a{
     text-decoration: none;
-    color: lightgrey;
+    color: #122b4c;
+    font-weight: bold;
 }
