@@ -23,7 +23,6 @@ window.onload = function () {
     }).then(function () {
         GetCurrentPosition().then(function (position, points) {
             GPSrechner(position, points);
-            //throw new Error("test");
         }).then(function () {
             Mittelwert();
         }).catch((ex) => {
@@ -124,7 +123,7 @@ window.onload = function () {
         zielDistanz(lat1, lon1, zielLat, zielLon);
         Distanz(lat1, lon1, lat2, lon2);
         Display();
-        if (d < 3) {
+        if (d < 5) {
             if (next.dataset.next === "null") {
                 const div = document.querySelector('#demo');
                 div.innerText = "Sie haben Ihr Ziel erreicht!";
@@ -134,7 +133,6 @@ window.onload = function () {
                 one.remove();
                 dong.play();
                 one = next;
-                obj = next;
             }
         }
     }
