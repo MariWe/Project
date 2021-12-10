@@ -49,19 +49,13 @@ window.onload = function () {
     }
     //AKtuelle Position 
     function GetCurrentPosition() {
-        const promise2 = new Promise((resolve, reject) => {
-            try {
                 geolocation.getCurrentPosition(function (position) {
                     lat = position.coords.latitude;
                     lon = position.coords.longitude;
-                    resolve({ lat, lon });
+                    console.log(lat, lon);
                 })
-            } catch (error) {
-                reject(error);
             }
-        });
-        return promise2;
-    }
+    
     //Mittelwertberechnung der aktuellen GPS Daten um "springen" der Objekte zu minnimieren 
     function Mittelwert() {
         document.getElementById(0).setAttribute('id', 'one');
