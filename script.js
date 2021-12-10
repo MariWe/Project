@@ -51,7 +51,7 @@ window.onload = function () {
     function GetCurrentPosition() {
         const promise2 = new Promise((resolve, reject) => {
             try {
-                navigator.geolocation.getCurrentPosition(function (position) {
+                geolocation.getCurrentPosition(function (position) {
                     lat = position.coords.latitude;
                     lon = position.coords.longitude;
                     resolve({ lat, lon });
