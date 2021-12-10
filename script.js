@@ -109,12 +109,14 @@ window.onload = function () {
         }
     }
     //Berechnung der Distanz zum Zielpunkt
-    function zielDistanz(lat, lon) {
+    function zielDistanz(lat1, lon1) {
+        let zlat = document.getElementById(11).getAttribute('data-lat');
+        let zlon = document.getElementById(11).getAttribute('data-lon');
         const R = 6371e3; // metres
         const φ1 = lat * Math.PI / 180; // φ, λ in radians
-        const φ2 = 50.82233925355029 * Math.PI / 180;
-        const Δφ = (50.82233925355029 - lat) * Math.PI / 180;
-        const Δλ = (12.939959823277517 - lon) * Math.PI / 180;
+        const φ2 = zlat * Math.PI / 180;
+        const Δφ = (zlat - lat1) * Math.PI / 180;
+        const Δλ = (zlon - lon1) * Math.PI / 180;
         const a = Math.sin(Δφ / 2) * Math.sin(Δφ / 2) +
             Math.cos(φ1) * Math.cos(φ2) *
             Math.sin(Δλ / 2) * Math.sin(Δλ / 2);
