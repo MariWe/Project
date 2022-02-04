@@ -132,7 +132,7 @@ window.onload = function () {
         zielDistanz(lat1, lon1, zielLat, zielLon);
         Distanz(lat1, lon1, lat2, lon2);
         Display();
-        if (d < 5) {
+        if (d < 15) {
             if (next.dataset.next === "null") {
                 const div = document.querySelector('#demo');
                 div.innerText = "Sie haben Ihr Ziel erreicht!";
